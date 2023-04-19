@@ -1,0 +1,6 @@
+userdb.txt
+target/
+*.class
+*.jar
+*.pub
+*.key
