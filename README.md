@@ -1,25 +1,24 @@
 # Access control
 
-This project consists of a server-client access control system.
+This project consists of a client-server access control system.
 The program allows users to register and login with a username and password, execute certain commands, and disconnect.
 The server manages the client's connections and authorizations to execute commands.
 
 ## Architecture
 ```
 └── sec
-|   ├── client
-|   |   ├── BasicTextClient.java
-|   |   └── ClientMain.java
-|   ├── common
-|   |   ├── BasicMessage.java
-|   |   ├── MsgType.java
-|   |   ├── NonReplayableMessage.java
-|   |   └── TextMessage.java
-|   └── server
-|       ├── BasicServer.java
-|       ├── ServerMain.java
-|       └── UserDB.java
-└── userdb.txt
+    ├── client
+    |   ├── BasicTextClient.java
+    |   └── ClientMain.java
+    ├── common
+    |   ├── BasicMessage.java
+    |   ├── MsgType.java
+    |   ├── NonReplayableMessage.java
+    |   └── TextMessage.java
+    └── server
+        ├── BasicServer.java
+        ├── ServerMain.java
+        └── UserDB.java
 ```
 
 ## Build
