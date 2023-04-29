@@ -4,6 +4,7 @@ import java.io.EOFException;
 import java.io.File;
 import java.io.IOException;
 import java.io.RandomAccessFile;
+import java.security.PrivateKey;
 import java.util.Arrays;
 import java.util.Base64;
 import java.util.NoSuchElementException;
@@ -14,8 +15,8 @@ import java.util.regex.Pattern;
 /**
  * Simple database storing users.
  *
- * The underlying database storage file is encoded in ascii and mostly human
- * readable to ease debugging and manipulation. Each line of the file
+ * The underlying database storage file is encoded in ascii and mostly human-readable
+ * to ease debugging and manipulation. Each line of the file
  * represents one unique user login. Additional user data fields (byte
  * arrays {@code byte[]}) are stored encoded in Base64 and fields are
  * delimited by commas ':'.
@@ -26,6 +27,8 @@ import java.util.regex.Pattern;
  */
 public class UserDB implements AutoCloseable
 {
+
+
     protected static final Pattern fieldDelimiter = Pattern.compile(":");
     private final ReentrantReadWriteLock lock =
             new ReentrantReadWriteLock(true);
@@ -193,6 +196,7 @@ public class UserDB implements AutoCloseable
         static private final Pattern loginPattern = Pattern.compile("[a-z]+");
         private final String login;
         private final byte[][] fields;
+        private PrivateKey privateKey;
 
         /**
          * Create a user to be stored in the database.

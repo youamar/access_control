@@ -4,5 +4,8 @@ public enum MsgType
 {
     EXIT,
     FATHER,
-    HELLO
+    HELLO,
+    REGISTER,
+    LOGIN,
+    DISCONNECT
 }

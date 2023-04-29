@@ -4,6 +4,7 @@ import java.io.Serializable;
 
 public class BasicMessage implements Serializable
 {
+
     private final MsgType type;
 
     private static int id_count = 0;
