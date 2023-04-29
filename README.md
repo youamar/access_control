@@ -25,8 +25,8 @@ The server manages the client's connections and authorizations to execute comman
 
 To build this project, make sure you have Java Development Kit (JDK) installed on your system.
 Then, follow the steps below:
-- Open a terminal and navigate to the root of the project directory.
-- Compile all the Java files by running the following command:
+- Open two terminals and navigate to the root of the project directory.
+- Compile all the Java files by running the following command in one of them :
 ```
 javac sec/client/*.java sec/common/*.java sec/server/*.java
 ```
@@ -34,13 +34,13 @@ This will compile all the Java files in the sec directory and its subdirectories
 
 ## Starting the Server
 
-To start the server, run the following command :
+To start the server, run the following command in the first terminal :
 ```
 java sec.server.ServerMain
 ```
 ## Starting the Client
 
-To start the client, run the following command :
+To start the client, run the following command in the second terminal :
 ```
 java sec.client.ClientMain
 ```
