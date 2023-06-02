@@ -78,7 +78,3 @@ Here are examples of how to use the program :
 ```
 > EXIT
 ```
-
-## Authors
-- 54915 - Yahya OUAMAR
-- 57396 - Sacha YOKO
